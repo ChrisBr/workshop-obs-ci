@@ -5,18 +5,18 @@ If you stuck with one exercise you can look at the linked answer.
 We will use the OBS reference installation on [build.opensuse.org](https://build.opensuse.org) which requires you to create an account.
 
 1. Create a GitHub repository with a simple script in it which prints ``Hello World`` to the console
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-1)
+      * [Answer](answers/exercise-1)
 
 2. Create a package in your [build.opensuse.org](https://build.opensuse.org) home project
 
 3. The package should contain a spec file which installs your ``Hello World`` script to ``/bin``
       * https://en.opensuse.org/openSUSE:Build_Service_Tutorial
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-3)
+      * [Answer](answers/exercise-3)
       * Bonus question: Make the package build for various distributions and architectures
 
 4. The package should contain a ``_service`` file which fetches the sources from the GitHub repository you created in the previous step
       * https://en.opensuse.org/openSUSE:Build_Service_Concept_SourceService
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-4)
+      * [Answer](answers/exercise-4)
 
 5. Connect your GitHub repository with OBS in order to let GitHub trigger a build if a new commit has been pushed to master
       * You can create a security token with `osc token`
@@ -30,22 +30,22 @@ We will use the OBS reference installation on [build.opensuse.org](https://build
       * Either use the kiwi image editor view (``Edit Kiwi``) or edit the ``kiwi.xml`` file
       * You need to add your ``home`` project and the ``Hello World`` package to your appliance
       * https://doc.opensuse.org/projects/kiwi/doc/#sec.description.packages
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-7)
+      * [Answer](answers/exercise-7)
 
 8. Add a ``root`` and a ``tux`` user to your appliance
       * https://doc.opensuse.org/projects/kiwi/doc/#sec.description.users
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-8)
+      * [Answer](answers/exercise-8)
 
 9. Add the ``apache2`` package and make sure that apache gets started automatically
       * You can enable services in the `config.sh` script
       * You can start the apache2 webserver via ``systemctl enable apache2``
       * https://doc.opensuse.org/projects/kiwi/doc/#ref.kiwi.config.sh
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-9)
+      * [Answer](answers/exercise-9)
 
 10. Add a simple ``Hello World`` html file to your apache2 webserver
       * You should add the files to the ``/root`` directory
       * The root directory needs to be a tar.gz file (``tar -zcvf tar-archive-name.tar.gz source-folder-name``)
       * The html files need to go into ``/srv/www/htdocs``
-      * [Answer](https://github.com/chrisbr/workshop-obs-ci/tree/exercise-11)
+      * [Answer](answers/exercise-11)
 
 13. Bonus Question: Download and run your appliance with QEMU / VirtualBox and test if everything works as expected
