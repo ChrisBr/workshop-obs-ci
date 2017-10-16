@@ -28,7 +28,8 @@ We will use the OBS reference installation on [build.opensuse.org](https://build
 
 7. Add your ``Hello World`` package to the appliance
       * Either use the kiwi image editor view (``Edit Kiwi``) or edit the ``kiwi.xml`` file
-      * You need to add your ``home`` project and the ``Hello World`` package to your appliance
+      * You need to add your ``home`` project repository and the ``Hello World`` package to your appliance
+      * https://doc.opensuse.org/projects/kiwi/doc/#sec.description.repository
       * https://doc.opensuse.org/projects/kiwi/doc/#sec.description.packages
       * [Answer](answers/exercise-7)
 
@@ -43,8 +44,8 @@ We will use the OBS reference installation on [build.opensuse.org](https://build
       * [Answer](answers/exercise-9)
 
 10. Add a simple ``Hello World`` html file to your apache2 webserver
-      * You should add the files to the ``/root`` directory
-      * The root directory needs to be a tar.gz file (``tar -zcvf tar-archive-name.tar.gz source-folder-name``)
+      * Kiwi uses a directory called ``root`` to store the root tree of your new image. Add your files in a directory named ``root``.
+      * The root directory needs to be archived as tar.gz file (``tar -zcvf tar-archive-name.tar.gz source-folder-name``)
       * The html files need to go into ``/srv/www/htdocs``
       * [Answer](answers/exercise-11)
 
